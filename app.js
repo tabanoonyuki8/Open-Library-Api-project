@@ -28,7 +28,7 @@ const searchBook = () => {
     //if there is any search item
     else {
         const url = `https://openlibrary.org/search.json?q=${searchText}`;
-        //console.log(url);
+       //you console url
         fetch(url)
             .then(res => res.json())
             .then(data => displaySearchBook(data))
@@ -42,7 +42,7 @@ const searchBook = () => {
 
 //display search book function
 const displaySearchBook = data => {
-    //console.log(data);
+    
 
     //get search result
     const searchResult = document.getElementById('search-result');
@@ -58,6 +58,7 @@ const displaySearchBook = data => {
         const h3 = document.createElement('h3');
         h3.innerText = `No result found!`;
         totalNum.appendChild(h3);
+        //else part
     } else {
         //display total number of books
         const totalNum = document.getElementById('total-num');
